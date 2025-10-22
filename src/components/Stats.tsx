@@ -1,25 +1,25 @@
-import { Users, BookOpen, Shield, TrendingUp } from "lucide-react";
+import { Users, BookOpen, Shield, TrendingUp, QrCode } from "lucide-react";
 
 const stats = [
   {
-    icon: Users,
-    value: "1000+",
-    label: "Creators Waiting",
-  },
-  {
     icon: BookOpen,
-    value: "∞",
+    value: "",
     label: "Years of Permanence",
   },
   {
     icon: Shield,
-    value: "100%",
+    value: "",
     label: "Decentralized",
   },
+   {
+    icon: Users,
+    value: "",
+    label: "Whitelabeling Partners",
+  },
   {
-    icon: TrendingUp,
-    value: "0%",
-    label: "Platform Fees",
+    icon: QrCode,
+    value: "",
+    label: "Verifiable proof",
   },
 ];
 

@@ -23,7 +23,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden" id="learn-more">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-mesh opacity-30" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />

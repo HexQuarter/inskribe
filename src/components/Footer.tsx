@@ -1,5 +1,7 @@
 import { Bitcoin } from "lucide-react";
 
+import Logo from "../assets/hexquarter_logo_transparent2.png"
+
 const Footer = () => {
   return (
     <footer className="relative py-16 px-4 sm:px-6 lg:px-8 border-t border-border/50 overflow-hidden">
@@ -19,7 +21,7 @@ const Footer = () => {
           </div>
           
           {/* Links - placeholder for future navigation */}
-          <div className="flex flex-wrap justify-center gap-8 text-sm">
+          {/* <div className="flex flex-wrap justify-center gap-8 text-sm">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
               About
             </a>
@@ -32,11 +34,11 @@ const Footer = () => {
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
               Discord
             </a>
-          </div>
+          </div> */}
           
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Inskribe. Built on Bitcoin.
+            © {new Date().getFullYear()} Inskribe - <br />by <a href="https://hexquarter.com" target="_blank" rel="noopener noreferrer"><img src={Logo} className="h-[15px] inline"/></a>.
           </p>
         </div>
       </div>

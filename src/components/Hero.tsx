@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { HashLink } from 'react-router-hash-link';
+
 
 interface HeroProps {
   onJoinWaitlist: () => void;
@@ -59,8 +61,9 @@ const Hero = ({ onJoinWaitlist }: HeroProps) => {
               variant="outline"
               size="lg"
               className="text-lg px-8 py-7 glass-effect hover:shadow-soft transition-all duration-300 border-primary/20 hover:border-primary/40"
+              asChild
             >
-              Learn More
+              <HashLink to="#learn-more">Learn More</HashLink>
             </Button>
           </div>
           
