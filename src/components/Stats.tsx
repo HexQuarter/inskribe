@@ -11,15 +11,15 @@ const stats = [
     value: "",
     label: "Decentralized",
   },
-   {
-    icon: Users,
-    value: "",
-    label: "Whitelabeling Partners",
-  },
   {
     icon: QrCode,
     value: "",
     label: "Verifiable proof",
+  },
+  {
+    icon: Users,
+    value: "",
+    label: "Whitelabeling Partners",
   },
 ];
 
