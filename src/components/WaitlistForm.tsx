@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, CheckCircle2, Sparkles } from "lucide-react";
+import validator from "validator";
 
 interface WaitlistFormProps {
   id?: string;
@@ -16,7 +17,7 @@ const WaitlistForm = ({ id }: WaitlistFormProps) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!email || !email.includes("@")) {
+    if (validator.isEmail(email) === false) {
       toast({
         title: "Invalid email",
         description: "Please enter a valid email address.",
@@ -24,6 +25,8 @@ const WaitlistForm = ({ id }: WaitlistFormProps) => {
       });
       return;
     }
+
+    setIsSubmitting(true);
 
     const res = await fetch(' https://z0o2wxacwc.execute-api.us-east-1.amazonaws.com/default/inskribe_subscribe_waiting_list', {
       method: 'POST',
@@ -40,10 +43,9 @@ const WaitlistForm = ({ id }: WaitlistFormProps) => {
         description: "There was an error submitting your email. Please try again later.",
         variant: "destructive",
       });
+      setIsSubmitting(false);
       return;
     }
-
-    setIsSubmitting(true);
 
     // Placeholder for form submission
     setTimeout(() => {
