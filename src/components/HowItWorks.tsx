@@ -59,7 +59,7 @@ const HowItWorks = () => {
                 {/* Card */}
                 <div className="relative text-center">
                   {/* Step number */}
-                  <div className="absolute -top-4 -right-4 w-16 h-16 rounded-2xl bg-gradient-bitcoin flex items-center justify-center shadow-glow">
+                  <div className="z-10 absolute -top-4 -right-4 w-16 h-16 rounded-2xl bg-gradient-bitcoin flex items-center justify-center shadow-glow">
                     <span className="text-2xl font-bold text-background">{step.step}</span>
                   </div>
 

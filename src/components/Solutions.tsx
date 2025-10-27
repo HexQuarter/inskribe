@@ -5,15 +5,13 @@ const Solutions = () => {
   const protocolFeatures = [
     "RESTful API for programmatic inscriptions",
     "CLI tool for batch operations",
-    "Webhook support for verification events",
-    "Open-source SDK (TypeScript, Python)",
-    "Self-hosted verification nodes",
+    "Open-source SDK"
   ];
 
   const saasFeatures = [
     "Custom branded dashboard",
     "White-label verification portal",
-    "Pre-built UX/UI components",
+    "Set your own fees and revenue model",
     "Managed infrastructure",
     "Priority support & SLA",
   ];
@@ -69,10 +67,10 @@ const Solutions = () => {
                 ))}
               </ul>
 
-              <Button variant="outline" className="w-full group/btn">
+              {/* <Button variant="outline" className="w-full group/btn">
                 <span>Explore API Docs</span>
                 <Code className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-              </Button>
+              </Button> */}
             </div>
           </div>
 
@@ -89,7 +87,7 @@ const Solutions = () => {
             
             <div className="relative h-full p-8 rounded-3xl glass-effect shadow-glass hover:shadow-glow transition-all duration-500 group-hover:-translate-y-2 border-2 border-primary/20">
               <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/20 backdrop-blur-sm">
-                <span className="text-xs font-bold text-primary">Recommended</span>
+                <span className="text-xs font-bold text-primary">Recommanded</span>
               </div>
 
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-bitcoin mb-6 group-hover:shadow-glow transition-all duration-300">
@@ -110,10 +108,10 @@ const Solutions = () => {
                 ))}
               </ul>
 
-              <Button className="w-full group/btn shadow-glow">
+              {/* <Button className="w-full group/btn shadow-glow">
                 <span>Request Demo</span>
                 <Cloud className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
