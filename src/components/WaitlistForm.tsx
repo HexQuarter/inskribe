@@ -25,6 +25,24 @@ const WaitlistForm = ({ id }: WaitlistFormProps) => {
       return;
     }
 
+    const res = await fetch(' https://z0o2wxacwc.execute-api.us-east-1.amazonaws.com/default/inskribe_subscribe_waiting_list', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ 
+        email
+      })
+    });
+    if (res.status !== 200) {
+      toast({
+        title: "Submission failed",
+        description: "There was an error submitting your email. Please try again later.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     // Placeholder for form submission
