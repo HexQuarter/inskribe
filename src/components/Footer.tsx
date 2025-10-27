@@ -1,6 +1,6 @@
 import { Bitcoin } from "lucide-react";
 
-import Logo from "../assets/hexquarter_logo_transparent2.png"
+import Logo from "../assets/hexquarter_logo_transparent.png"
 
 const Footer = () => {
   return (
