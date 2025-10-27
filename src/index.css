@@ -8,14 +8,14 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 5%;
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 5%;
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 5%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
 
     --primary: 25 95% 53%;
     --primary-foreground: 0 0% 100%;
@@ -23,41 +23,41 @@ All colors MUST be HSL.
     --primary-light: 25 95% 65%;
     --primary-dark: 25 95% 43%;
 
-    --secondary: 0 0% 97%;
-    --secondary-foreground: 0 0% 5%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 217 33% 15%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 25 95% 96%;
+    --accent: 217 33% 17%;
     --accent-foreground: 25 95% 53%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 92%;
-    --input: 0 0% 92%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
     --ring: 25 95% 53%;
 
     --radius: 1rem;
     
     /* Premium Gradients */
     --gradient-bitcoin: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(35 95% 63%) 50%, hsl(25 95% 53%) 100%);
-    --gradient-mesh: radial-gradient(at 27% 37%, hsl(25 95% 96%) 0, transparent 50%),
-                     radial-gradient(at 97% 21%, hsl(25 95% 90%) 0, transparent 50%),
-                     radial-gradient(at 52% 99%, hsl(25 85% 93%) 0, transparent 50%),
-                     radial-gradient(at 10% 29%, hsl(25 95% 95%) 0, transparent 50%),
-                     radial-gradient(at 97% 96%, hsl(25 90% 92%) 0, transparent 50%),
-                     radial-gradient(at 33% 50%, hsl(25 95% 94%) 0, transparent 50%),
-                     radial-gradient(at 79% 53%, hsl(25 85% 95%) 0, transparent 50%);
-    --gradient-overlay: linear-gradient(180deg, transparent 0%, hsl(0 0% 100% / 0.8) 100%);
-    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.1) 0%, hsl(0 0% 100% / 0.05) 100%);
+    --gradient-mesh: radial-gradient(at 27% 37%, hsl(25 95% 20%) 0, transparent 50%),
+                     radial-gradient(at 97% 21%, hsl(25 95% 15%) 0, transparent 50%),
+                     radial-gradient(at 52% 99%, hsl(25 85% 18%) 0, transparent 50%),
+                     radial-gradient(at 10% 29%, hsl(25 95% 17%) 0, transparent 50%),
+                     radial-gradient(at 97% 96%, hsl(25 90% 16%) 0, transparent 50%),
+                     radial-gradient(at 33% 50%, hsl(25 95% 19%) 0, transparent 50%),
+                     radial-gradient(at 79% 53%, hsl(25 85% 16%) 0, transparent 50%);
+    --gradient-overlay: linear-gradient(180deg, transparent 0%, hsl(222 47% 5% / 0.9) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.05) 0%, hsl(0 0% 100% / 0.02) 100%);
     
     /* Premium Shadows */
-    --shadow-soft: 0 8px 32px -8px hsl(25 95% 53% / 0.12);
-    --shadow-glow: 0 0 80px hsl(25 95% 53% / 0.3), 0 0 32px hsl(25 95% 53% / 0.2);
-    --shadow-glass: 0 8px 32px 0 hsl(0 0% 0% / 0.08);
-    --shadow-xl: 0 20px 60px -12px hsl(0 0% 0% / 0.15);
+    --shadow-soft: 0 8px 32px -8px hsl(25 95% 53% / 0.2);
+    --shadow-glow: 0 0 80px hsl(25 95% 53% / 0.4), 0 0 32px hsl(25 95% 53% / 0.3);
+    --shadow-glass: 0 8px 32px 0 hsl(0 0% 0% / 0.3);
+    --shadow-xl: 0 20px 60px -12px hsl(0 0% 0% / 0.4);
   }
 
   .dark {
@@ -115,10 +115,10 @@ All colors MUST be HSL.
 
 @layer utilities {
   .glass-effect {
-    background: linear-gradient(135deg, hsl(0 0% 100% / 0.1) 0%, hsl(0 0% 100% / 0.05) 100%);
+    background: linear-gradient(135deg, hsl(0 0% 100% / 0.05) 0%, hsl(0 0% 100% / 0.02) 100%);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid hsl(0 0% 100% / 0.18);
+    border: 1px solid hsl(0 0% 100% / 0.1);
   }
   
   .text-gradient {
