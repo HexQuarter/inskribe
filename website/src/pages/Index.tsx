@@ -1,27 +1,35 @@
-import { useRef } from "react";
 import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import Stats from "@/components/Stats";
-import HowItWorks from "@/components/HowItWorks";
-import Solutions from "@/components/Solutions";
+import Problem from "@/components/Problem";
+import Solution from "@/components/Solution";
 import UseCases from "@/components/UseCases";
-import WaitlistForm from "@/components/WaitlistForm";
+import HowItWorks from "@/components/HowItWorks";
+import Product from "@/components/Product";
+import TrustSecurity from "@/components/TrustSecurity";
+import Pricing from "@/components/Pricing";
+import FAQ from "@/components/FAQ";
+import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
-  const scrollToWaitlist = () => {
-    document.getElementById('waitlist')?.scrollIntoView({ behavior: "smooth" });
+  const scrollToDemo = () => {
+    // For now, scroll to CTA section. Later can be replaced with a modal or Calendly
+    document.getElementById('cta')?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className="min-h-screen bg-background">
-      <Hero onJoinWaitlist={scrollToWaitlist} />
-      <Stats />
-      <HowItWorks />
-      <Features />
-      <Solutions />
+      <Hero onBookDemo={scrollToDemo} variant="ai" />
+      <Problem />
+      <Solution />
       <UseCases />
-      <WaitlistForm id="waitlist" />
+      <HowItWorks />
+      <Product />
+      <TrustSecurity />
+      <Pricing />
+      <FAQ />
+      <div id="cta">
+        <CTA onBookDemo={scrollToDemo} />
+      </div>
       <Footer />
     </div>
   );

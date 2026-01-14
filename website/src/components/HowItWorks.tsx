@@ -1,88 +1,77 @@
-import { FileText, Hash, Shield } from "lucide-react";
+import { Upload, Sparkles, Lock, CheckCircle } from "lucide-react";
 
 const steps = [
   {
-    icon: FileText,
-    title: "Register Your Work",
-    description: "Upload your manuscript, article, or creative work. Inskribe generates a cryptographic hash of your content.",
+    icon: Upload,
     step: "01",
+    title: "Ingest",
+    description: "Upload content or connect your pipeline. Documents, datasets, media files, or structured data."
   },
   {
-    icon: Hash,
-    title: "Inscribe on Bitcoin",
-    description: "Your work's hash is permanently inscribed on the Bitcoin blockchain with a timestamp, creating an immutable record.",
+    icon: Sparkles,
     step: "02",
+    title: "Segment",
+    description: "AI-assisted segmentation proposes logical parts. Human confirmation locks the manifest."
   },
   {
-    icon: Shield,
-    title: "Verify & Share Proof",
-    description: "Receive a verifiable certificate. Anyone can confirm authenticity by comparing the hash against the blockchain record.",
+    icon: Lock,
     step: "03",
+    title: "Seal",
+    description: "Merkle roots computed. Lineage links established. Issuer signs. Bitcoin anchors the timestamp."
   },
+  {
+    icon: CheckCircle,
+    step: "04",
+    title: "Verify",
+    description: "Web verifier or offline tool. Anyone can validate without our infrastructure."
+  }
 ];
 
 const HowItWorks = () => {
   return (
-    <section className="relative py-32 px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-20 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect mb-6">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm font-medium text-muted-foreground">Simple Process</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            How <span className="text-gradient">Inskribe</span> Works
+    <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-card/30">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-foreground">
+            How It Works
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Three steps to permanent, verifiable authorship on Bitcoin
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Four steps from raw content to independently verifiable proof.
           </p>
         </div>
 
+        {/* Steps */}
         <div className="relative">
-          {/* Connection line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/20 to-transparent -translate-y-1/2" />
-
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+          {/* Connection line - desktop */}
+          <div className="hidden lg:block absolute top-16 left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="relative group"
+                className="relative text-center"
                 style={{
-                  animation: 'fade-in 0.8s ease-out forwards',
-                  animationDelay: `${index * 0.2}s`,
+                  animation: 'fade-in 0.6s ease-out forwards',
+                  animationDelay: `${index * 0.15}s`,
                   opacity: 0
                 }}
               >
-                {/* Glow effect */}
-                <div className="absolute -inset-1 bg-gradient-bitcoin opacity-0 group-hover:opacity-20 blur-xl rounded-2xl transition-opacity duration-500" />
-
-                {/* Card */}
-                <div className="relative text-center">
-                  {/* Step number */}
-                  <div className="z-10 absolute -top-4 -right-4 w-16 h-16 rounded-2xl bg-gradient-bitcoin flex items-center justify-center shadow-glow">
-                    <span className="text-2xl font-bold text-background">{step.step}</span>
+                {/* Step number */}
+                <div className="relative inline-flex mb-6">
+                  <div className="w-16 h-16 rounded-2xl bg-card border border-border/50 flex items-center justify-center relative z-10">
+                    <step.icon className="w-7 h-7 text-primary" />
                   </div>
-
-                  <div className="p-8 rounded-2xl glass-effect shadow-glass hover:shadow-glow transition-all duration-300 group-hover:-translate-y-2">
-                    {/* Icon */}
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-accent mb-6 group-hover:shadow-glow transition-all duration-300">
-                      <step.icon className="w-8 h-8 text-primary" />
-                    </div>
-
-                    {/* Content */}
-                    <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
+                  <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-primary text-background text-xs font-bold flex items-center justify-center">
+                    {step.step}
+                  </span>
                 </div>
 
-                {/* Arrow connector (mobile) */}
-                {index < steps.length - 1 && (
-                  <div className="md:hidden flex justify-center my-6">
-                    <div className="w-px h-8 bg-gradient-to-b from-primary/50 to-transparent" />
-                  </div>
-                )}
+                <h3 className="text-lg font-bold mb-2 text-foreground">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {step.description}
+                </p>
               </div>
             ))}
           </div>

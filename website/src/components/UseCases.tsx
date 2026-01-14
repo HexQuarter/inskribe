@@ -1,82 +1,91 @@
-import { BookOpen, Newspaper, Building2, Users } from "lucide-react";
+import { Database, Shield, Scale } from "lucide-react";
 
 const useCases = [
   {
-    icon: BookOpen,
-    title: "Authors & Publishers",
-    description: "Register manuscripts, editions, and revisions with verifiable timestamps. Protect your intellectual property from the moment of creation.",
-    gradient: "from-orange-500 to-red-500",
+    icon: Database,
+    title: "AI Dataset Provenance",
+    subtitle: "Audit exports & version lineage",
+    description: "Prove what data was included or excluded in training sets. Track version lineage across dataset iterations. Export audit bundles for compliance reviews.",
+    bullets: [
+      "Inclusion/exclusion proofs for licensing disputes",
+      "Version lineage with derived-from links",
+      "Audit exports for regulatory compliance"
+    ]
   },
   {
-    icon: Newspaper,
-    title: "Journalists & Media",
-    description: "Anchor articles and reports on-chain to prove publication time and original content. Combat misinformation with cryptographic proof.",
-    gradient: "from-orange-500 to-yellow-500",
+    icon: Shield,
+    title: "Media Authenticity",
+    subtitle: "Origin badges & chain-of-custody",
+    description: "Attach verifiable origin badges to official content. Track chain-of-custody from creation through distribution. Combat deepfakes with cryptographic provenance.",
+    bullets: [
+      "Official origin verification for media outlets",
+      "Chain-of-custody for syndicated content",
+      "Tamper-evident seals for archives"
+    ]
   },
   {
-    icon: Building2,
-    title: "Research & Academia",
-    description: "Timestamp research papers, datasets, and findings on Bitcoin. Establish priority and protect against plagiarism permanently.",
-    gradient: "from-orange-600 to-orange-400",
-  },
-  {
-    icon: Users,
-    title: "Creative Networks",
-    description: "White-label Inskribe for your community. Offer branded authorship verification to writers, artists, and content creators.",
-    gradient: "from-orange-500 to-amber-500",
-  },
+    icon: Scale,
+    title: "Legal-Grade Evidence",
+    subtitle: "Court-ready proof bundles",
+    description: "Create verification bundles designed for legal scrutiny. Independently verifiable by any party — no reliance on Inskribe infrastructure. Offline verification for air-gapped environments.",
+    bullets: [
+      "Self-contained evidence packages",
+      "Third-party verifiable without our servers",
+      "Designed for legal-grade verification"
+    ]
+  }
 ];
 
 const UseCases = () => {
   return (
-    <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 right-20 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-20 left-20 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
-      </div>
-
-      <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-20 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect mb-6">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm font-medium text-muted-foreground">Built For Everyone</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Who <span className="text-gradient">Benefits</span>
+    <section className="relative py-24 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-foreground">
+            Built for Real Workflows
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From individual creators to enterprise publishers, Inskribe protects what matters most
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            From AI pipelines to publishing houses to legal discovery — Proof Packets 
+            integrate where authenticity matters.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-8">
           {useCases.map((useCase, index) => (
             <div
               key={index}
-              className="group relative"
+              className="group relative p-8 rounded-2xl border border-border/50 bg-card/30 hover:bg-card/50 hover:border-primary/30 transition-all duration-300"
               style={{
-                animation: 'fade-in 0.8s ease-out forwards',
-                animationDelay: `${index * 0.1}s`,
+                animation: 'fade-in 0.6s ease-out forwards',
+                animationDelay: `${index * 0.15}s`,
                 opacity: 0
               }}
             >
-              {/* Hover glow */}
-              <div className="absolute -inset-1 bg-gradient-bitcoin opacity-0 group-hover:opacity-25 blur-xl rounded-2xl transition-all duration-500" />
-
-              {/* Card */}
-              <div className="relative h-full p-8 rounded-2xl glass-effect shadow-glass hover:shadow-glow transition-all duration-500 group-hover:-translate-y-1">
-                {/* Icon with gradient */}
-                <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${useCase.gradient} mb-5 shadow-lg group-hover:shadow-glow transition-all duration-300 group-hover:scale-110`}>
-                  <useCase.icon className="w-7 h-7 text-white" />
-                </div>
-
-                {/* Content */}
-                <h3 className="text-xl font-bold mb-3">{useCase.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {useCase.description}
-                </p>
+              {/* Icon */}
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+                <useCase.icon className="w-6 h-6 text-primary" />
               </div>
+
+              {/* Content */}
+              <h3 className="text-xl font-bold mb-1 text-foreground">
+                {useCase.title}
+              </h3>
+              <p className="text-sm text-primary font-medium mb-4">
+                {useCase.subtitle}
+              </p>
+              <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
+                {useCase.description}
+              </p>
+
+              {/* Bullets */}
+              <ul className="space-y-2">
+                {useCase.bullets.map((bullet, idx) => (
+                  <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="w-1 h-1 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

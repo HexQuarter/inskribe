@@ -1,44 +1,45 @@
-import { Bitcoin } from "lucide-react";
-
-import Logo from "../assets/hexquarter_logo_transparent.png"
+import { FileCheck } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="relative py-16 px-4 sm:px-6 lg:px-8 border-t border-border/50 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-accent/30 to-transparent pointer-events-none" />
-      
-      <div className="container mx-auto max-w-7xl relative z-10">
+    <footer className="relative py-12 px-4 sm:px-6 lg:px-8 border-t border-border/50">
+      <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl glass-effect shadow-soft flex items-center justify-center">
-              <Bitcoin className="w-6 h-6 text-primary" />
+            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+              <FileCheck className="w-4 h-4 text-primary" />
             </div>
-            <span className="text-3xl font-bold text-gradient">
+            <span className="text-xl font-bold text-foreground">
               Inskribe
             </span>
           </div>
           
-          {/* Links - placeholder for future navigation */}
-          {/* <div className="flex flex-wrap justify-center gap-8 text-sm">
+          {/* Links */}
+          <div className="flex flex-wrap justify-center gap-8 text-sm">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-              About
+              Documentation
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-              Docs
+              API Reference
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-              Twitter
+              GitHub
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-              Discord
+              Contact
             </a>
-          </div> */}
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
+              Privacy
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
+              Terms
+            </a>
+          </div>
           
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Inskribe - <br />by <a href="https://hexquarter.com" target="_blank" rel="noopener noreferrer"><img src={Logo} className="h-[15px] inline"/></a>.
+            © {new Date().getFullYear()} Inskribe
           </p>
         </div>
       </div>
