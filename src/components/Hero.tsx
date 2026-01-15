@@ -1,27 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, FileCheck, ExternalLink } from "lucide-react";
+import { ArrowRight, Shield, ExternalLink } from "lucide-react";
 
 interface HeroProps {
   onBookDemo: () => void;
-  variant?: "ai" | "publishing";
 }
 
-const Hero = ({ onBookDemo, variant = "ai" }: HeroProps) => {
-  const content = {
-    ai: {
-      headline: "Proof Packets for the AI Era",
-      subheadline: "Authenticity, lineage, and execution receipts — anchored to Bitcoin.",
-      description: "When AI generates, transforms, or trains on content, Inskribe creates tamper-evident proof bundles. Verify provenance, audit pipelines, and prove chain-of-custody — offline or on-chain."
-    },
-    publishing: {
-      headline: "Authorship Provenance, Sealed Forever",
-      subheadline: "Proof Packets for publishers, archives, and rights holders.",
-      description: "Register manuscripts, editions, and derivatives with cryptographic precision. Every chapter, excerpt, and revision linked to its parent — verifiable by anyone, anywhere."
-    }
-  };
-
-  const { headline, subheadline, description } = content[variant];
-
+const Hero = ({ onBookDemo }: HeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Subtle mesh gradient background */}
@@ -44,8 +28,8 @@ const Hero = ({ onBookDemo, variant = "ai" }: HeroProps) => {
             className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-border/50 bg-card/50 backdrop-blur-sm animate-fade-in"
             style={{ animationDelay: '0.1s' }}
           >
-            <FileCheck className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-muted-foreground">Provenance Infrastructure</span>
+            <Shield className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-muted-foreground">Bitcoin-Native Provenance</span>
           </div>
           
           {/* Main heading */}
@@ -53,7 +37,7 @@ const Hero = ({ onBookDemo, variant = "ai" }: HeroProps) => {
             className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-[1.1] tracking-tight animate-fade-in"
             style={{ animationDelay: '0.2s' }}
           >
-            <span className="text-foreground">{headline}</span>
+            <span className="text-foreground">Authorship Sealed in Bitcoin</span>
           </h1>
           
           {/* Subheadline */}
@@ -61,7 +45,7 @@ const Hero = ({ onBookDemo, variant = "ai" }: HeroProps) => {
             className="text-xl sm:text-2xl text-primary font-medium mb-6 animate-fade-in"
             style={{ animationDelay: '0.25s' }}
           >
-            {subheadline}
+            Prove creation, lineage, and custody — forever.
           </p>
           
           {/* Description */}
@@ -69,7 +53,9 @@ const Hero = ({ onBookDemo, variant = "ai" }: HeroProps) => {
             className="text-lg text-muted-foreground mb-10 max-w-2xl leading-relaxed animate-fade-in"
             style={{ animationDelay: '0.3s' }}
           >
-            {description}
+            Inskribe creates tamper-evident Proof Packets for books, editions, manuscripts, 
+            media, and digital assets. Verify provenance and authorship with cryptographic 
+            certainty — anchored to the Bitcoin blockchain.
           </p>
           
           {/* CTA Buttons */}

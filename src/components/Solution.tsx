@@ -1,4 +1,4 @@
-import { Package, Hash, GitBranch, PenTool, Link2, Cpu } from "lucide-react";
+import { Package, Hash, GitBranch, PenTool, Link2, Bitcoin } from "lucide-react";
 
 const proofComponents = [
   {
@@ -9,7 +9,7 @@ const proofComponents = [
   {
     icon: GitBranch,
     label: "Segmentation Manifest",
-    description: "AI-proposed, human-confirmed part boundaries"
+    description: "Logical parts — chapters, sections, versions"
   },
   {
     icon: Link2,
@@ -19,17 +19,17 @@ const proofComponents = [
   {
     icon: PenTool,
     label: "Issuer Signature",
-    description: "Publisher or author attestation"
+    description: "Author or publisher attestation"
   },
   {
-    icon: Package,
+    icon: Bitcoin,
     label: "Bitcoin Anchor",
     description: "Immutable timestamp via Bitcoin transaction"
   },
   {
-    icon: Cpu,
-    label: "Pipeline Hash (Optional)",
-    description: "Execution receipt for AI/automation workflows"
+    icon: Package,
+    label: "Lineage Links",
+    description: "Derived-from references to parent works"
   }
 ];
 
@@ -51,7 +51,7 @@ const Solution = () => {
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               A Proof Packet is a self-contained verification bundle. It holds everything needed 
-              to prove authenticity, lineage, and chain-of-custody — without relying on any 
+              to prove authorship, authenticity, and chain-of-custody — without relying on any 
               central authority.
             </p>
 
@@ -60,19 +60,19 @@ const Solution = () => {
                 <span className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <span className="text-xs font-bold text-primary">1</span>
                 </span>
-                <p><strong className="text-foreground">AI proposes</strong> — semantic segmentation suggests logical parts (chapters, clips, data subsets).</p>
+                <p><strong className="text-foreground">Define structure</strong> — segment your work into logical parts (chapters, versions, excerpts).</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <span className="text-xs font-bold text-primary">2</span>
                 </span>
-                <p><strong className="text-foreground">Humans confirm</strong> — the issuer approves or adjusts the manifest.</p>
+                <p><strong className="text-foreground">Sign & attest</strong> — the issuer confirms the manifest and signs.</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <span className="text-xs font-bold text-primary">3</span>
                 </span>
-                <p><strong className="text-foreground">Cryptography seals</strong> — Merkle trees link parts to the root; signatures attest; Bitcoin anchors.</p>
+                <p><strong className="text-foreground">Bitcoin anchors</strong> — Merkle roots are timestamped on the Bitcoin blockchain.</p>
               </div>
             </div>
           </div>

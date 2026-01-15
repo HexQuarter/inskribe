@@ -1,29 +1,29 @@
-import { Upload, Sparkles, Lock, CheckCircle } from "lucide-react";
+import { Upload, Layers, Lock, CheckCircle } from "lucide-react";
 
 const steps = [
   {
     icon: Upload,
     step: "01",
-    title: "Ingest",
-    description: "Upload content or connect your pipeline. Documents, datasets, media files, or structured data."
+    title: "Upload",
+    description: "Submit your content — manuscripts, media, datasets, or any digital asset."
   },
   {
-    icon: Sparkles,
+    icon: Layers,
     step: "02",
-    title: "Segment",
-    description: "AI-assisted segmentation proposes logical parts. Human confirmation locks the manifest."
+    title: "Structure",
+    description: "Define logical segments. Chapters, versions, or parts — each gets its own proof."
   },
   {
     icon: Lock,
     step: "03",
     title: "Seal",
-    description: "Merkle roots computed. Lineage links established. Issuer signs. Bitcoin anchors the timestamp."
+    description: "Merkle roots computed. Issuer signs. Bitcoin anchors the timestamp immutably."
   },
   {
     icon: CheckCircle,
     step: "04",
     title: "Verify",
-    description: "Web verifier or offline tool. Anyone can validate without our infrastructure."
+    description: "Anyone can validate — online or offline — without relying on our infrastructure."
   }
 ];
 
@@ -36,7 +36,7 @@ const HowItWorks = () => {
             How It Works
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Four steps from raw content to independently verifiable proof.
+            Four steps from raw content to Bitcoin-anchored proof.
           </p>
         </div>
 

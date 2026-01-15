@@ -1,25 +1,25 @@
-import { AlertTriangle, Bot, FileQuestion, Scale, Database } from "lucide-react";
+import { AlertTriangle, Copy, Clock, FileQuestion, Unlink } from "lucide-react";
 
 const problems = [
   {
-    icon: Bot,
-    title: "AI-Generated Content Floods the Market",
-    description: "Deepfakes, synthetic media, and AI-written text are indistinguishable from human work. Origin claims are unverifiable."
+    icon: Copy,
+    title: "Plagiarism & Attribution Disputes",
+    description: "Proving you wrote something first is nearly impossible. Screenshots, emails, and timestamps are easily fabricated or disputed."
+  },
+  {
+    icon: Clock,
+    title: "Editions Lose Their Lineage",
+    description: "Books, manuscripts, and media go through countless revisions. Without verifiable history, derivative works and editions become untraceable."
   },
   {
     icon: FileQuestion,
-    title: "Provenance Gaps in Datasets",
-    description: "Training data lacks audit trails. Disputes over inclusion, licensing, and version lineage have no resolution mechanism."
+    title: "Provenance Gaps in Digital Assets",
+    description: "Digital content lacks inherent proof of origin. Metadata is editable, cloud timestamps are controlled by providers, and internal logs are easily contested."
   },
   {
-    icon: Scale,
-    title: "Legal Proof Is Fragile",
-    description: "Timestamps from internal logs, cloud metadata, or notary services are easily contested. Courts need independently verifiable evidence."
-  },
-  {
-    icon: Database,
-    title: "Pipeline Approvals Vanish",
-    description: "Human-in-the-loop confirmations, model outputs, and execution receipts disappear into ephemeral logs."
+    icon: Unlink,
+    title: "Chain-of-Custody Breaks",
+    description: "When content changes hands — publishers, distributors, archives — custody records are scattered across systems with no unified proof."
   }
 ];
 
@@ -34,11 +34,11 @@ const Problem = () => {
           </div>
           
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-foreground">
-            Trust Collapses in the AI Era
+            Digital Authorship Has No Proof
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
-            When anyone can generate anything, authenticity becomes the scarcest resource. 
-            Existing systems weren't built for this level of ambiguity.
+            In a world of instant copying and easy manipulation, proving you created something 
+            — and when — requires more than your word.
           </p>
         </div>
 

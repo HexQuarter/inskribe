@@ -1,37 +1,48 @@
-import { Database, Shield, Scale } from "lucide-react";
+import { BookOpen, Image, Archive, Music } from "lucide-react";
 
 const useCases = [
   {
-    icon: Database,
-    title: "AI Dataset Provenance",
-    subtitle: "Audit exports & version lineage",
-    description: "Prove what data was included or excluded in training sets. Track version lineage across dataset iterations. Export audit bundles for compliance reviews.",
+    icon: BookOpen,
+    title: "Publishing & Manuscripts",
+    subtitle: "Editions, revisions & authorship",
+    description: "Seal manuscripts, track edition lineage, and prove authorship for books, articles, and written works. Each version links cryptographically to its parent.",
     bullets: [
-      "Inclusion/exclusion proofs for licensing disputes",
-      "Version lineage with derived-from links",
-      "Audit exports for regulatory compliance"
+      "Manuscript registration with Bitcoin timestamps",
+      "Edition lineage with derived-from proofs",
+      "Chapter-level verification for excerpts"
     ]
   },
   {
-    icon: Shield,
-    title: "Media Authenticity",
-    subtitle: "Origin badges & chain-of-custody",
-    description: "Attach verifiable origin badges to official content. Track chain-of-custody from creation through distribution. Combat deepfakes with cryptographic provenance.",
+    icon: Image,
+    title: "Photography & Media",
+    subtitle: "Origin badges & provenance",
+    description: "Attach verifiable origin proofs to photographs, videos, and digital art. Prove you captured or created the original — not a copy.",
     bullets: [
-      "Official origin verification for media outlets",
-      "Chain-of-custody for syndicated content",
-      "Tamper-evident seals for archives"
+      "Tamper-evident origin seals",
+      "Chain-of-custody for distribution",
+      "Subset proofs for cropped works"
     ]
   },
   {
-    icon: Scale,
-    title: "Legal-Grade Evidence",
-    subtitle: "Court-ready proof bundles",
-    description: "Create verification bundles designed for legal scrutiny. Independently verifiable by any party — no reliance on Inskribe infrastructure. Offline verification for air-gapped environments.",
+    icon: Music,
+    title: "Music & Audio",
+    subtitle: "Compositions, masters & remixes",
+    description: "Register original compositions, master recordings, and derivative works. Track remix lineage and prove creation dates.",
     bullets: [
-      "Self-contained evidence packages",
-      "Third-party verifiable without our servers",
-      "Designed for legal-grade verification"
+      "Master registration with Bitcoin anchors",
+      "Version history for remixes and edits",
+      "Collaboration attestations"
+    ]
+  },
+  {
+    icon: Archive,
+    title: "Archives & Records",
+    subtitle: "Preservation & authenticity",
+    description: "Seal archival records, datasets, and institutional documents. Prove content hasn't been altered since a specific point in time.",
+    bullets: [
+      "Long-term preservation proofs",
+      "Institutional attestation chains",
+      "Offline verification for air-gapped systems"
     ]
   }
 ];
@@ -42,15 +53,15 @@ const UseCases = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-foreground">
-            Built for Real Workflows
+            Built for Creators & Institutions
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From AI pipelines to publishing houses to legal discovery — Proof Packets 
-            integrate where authenticity matters.
+            From authors to archives — Proof Packets protect authorship 
+            wherever provenance matters.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {useCases.map((useCase, index) => (
             <div
               key={index}

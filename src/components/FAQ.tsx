@@ -7,24 +7,28 @@ import {
 
 const faqs = [
   {
-    question: "Why not just use internal logs or a database timestamp?",
-    answer: "Internal logs are controlled by you — which means they can be modified, deleted, or disputed. Inskribe anchors proofs to Bitcoin, an external, neutral, immutable ledger. No single party controls it, so timestamps are independently verifiable by anyone."
+    question: "Why Bitcoin instead of another blockchain?",
+    answer: "Bitcoin is the most secure, decentralized, and battle-tested blockchain. Its proof-of-work consensus and 15+ year track record make it the most reliable neutral timestamp authority. We use it purely for anchoring — not tokens or trading."
   },
   {
-    question: "Is this an NFT?",
-    answer: "No. Inskribe uses Bitcoin as a timestamp authority, not as a marketplace or collectible system. We don't create tradeable tokens. We create verification proofs — portable, self-contained bundles that prove authenticity and lineage."
+    question: "Is this an NFT or cryptocurrency?",
+    answer: "No. Inskribe doesn't create tradeable tokens or collectibles. We create verification proofs — portable, self-contained bundles that prove when something existed and who created it. Bitcoin is used solely as a timestamp anchor."
   },
   {
-    question: "What actually goes on-chain?",
-    answer: "Only a Merkle root hash (32 bytes) is written to Bitcoin. Your content, metadata, and full proof structure remain off-chain in your chosen storage. This preserves privacy while guaranteeing the timestamp."
+    question: "What actually goes on the blockchain?",
+    answer: "Only a Merkle root hash (32 bytes) is written to Bitcoin. Your actual content, metadata, and full proof structure remain off-chain in your chosen storage. This preserves privacy while guaranteeing the timestamp."
   },
   {
     question: "What about private or sensitive content?",
-    answer: "Inskribe never stores your content unless you explicitly upload it to our cloud. In hash-only mode, we process cryptographic fingerprints — we never see the underlying data. For subset proofs, zero-knowledge techniques allow verification without revealing the full dataset."
+    answer: "Inskribe never stores your content unless you explicitly choose cloud storage. In hash-only mode, we process cryptographic fingerprints — we never see the underlying data. Your content stays with you."
   },
   {
-    question: "How do these proofs hold up legally?",
-    answer: "Inskribe Proof Packets are designed for legal-grade verification. They're independently verifiable, tamper-evident, and anchored to a publicly auditable ledger. While we don't claim legal admissibility (which varies by jurisdiction), the proofs meet a high bar for authenticity evidence. Several customers use them in litigation and compliance contexts."
+    question: "Can I prove authorship of just part of a work?",
+    answer: "Yes. Proof Packets support subset proofs. If you've sealed a complete manuscript, you can later prove that a specific chapter or excerpt was part of the original — without revealing the rest."
+  },
+  {
+    question: "How do I verify a Proof Packet?",
+    answer: "Use our web verifier or offline verification tool. Verification is completely independent — it doesn't require our servers or infrastructure. Anyone with the Proof Packet can validate it against the Bitcoin blockchain."
   }
 ];
 
@@ -37,7 +41,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-muted-foreground">
-            Common questions about Proof Packets, privacy, and verification.
+            Common questions about Proof Packets, Bitcoin anchoring, and verification.
           </p>
         </div>
 
